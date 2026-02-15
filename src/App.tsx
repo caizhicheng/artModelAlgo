@@ -3,12 +3,14 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Profile from './pages/Profile';
+import PointCloudPage from './pages/PointCloudPage';
 
 const navItems = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
   { to: '/profile', label: 'Profile' },
+  { to: '/point-cloud', label: 'Point Cloud' },
 ];
 
 function App() {
@@ -45,6 +47,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/point-cloud" element={<PointCloudPage />} />
         </Routes>
       </main>
     </div>
