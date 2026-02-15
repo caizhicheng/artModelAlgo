@@ -11,36 +11,25 @@
 
 ## Node compatibility
 
-This project is pinned to **Vite 4.5.14** for compatibility with Node 14/16/18.
+If you see `crypto.getRandomValues is not a function` when running `npm run dev`, it usually means your local Node.js runtime is too old for your installed Vite major version.
 
-- Supported Node range: `>=14.18.0 <20`
-- If you saw: `Vite requires Node.js version 20.19+ or 22.12+`, your local `node_modules` likely still contains a newer Vite major version.
+This project is pinned to **Vite 4** for better compatibility with older Node environments.
 
-## Clean reinstall (important)
-
-### Windows PowerShell
-
-```powershell
-Remove-Item -Recurse -Force node_modules, package-lock.json
-npm install
-npm run dev
-```
-
-### macOS / Linux
+Recommended:
+- Node.js `>= 14.18` (or preferably Node.js 18 LTS+)
+- Remove old dependencies before reinstalling:
 
 ```bash
 rm -rf node_modules package-lock.json
 npm install
-npm run dev
 ```
 
-## Verify installed Vite version
+## Run locally
 
 ```bash
-npx vite --version
+npm install
+npm run dev
 ```
-
-Expected major version: `4.x`
 
 ## Build
 
